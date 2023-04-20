@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+       "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+	<form-beans>
+			<form-bean name="UserForm" type="com.assignment.UserForm"></form-bean>
+	</form-beans>
+	<action-mappings>
+	
+	<action path="/adduser" scope="session" name="UserForm" type="com.assignment.AddUser">
+		<forward name="added" path="/index.jsp" />
+		<forward name="view" path="/view.jsp" />
+		<forward name="edit" path="/edit.jsp" />
+	</action>
+	
+	</action-mappings>
+
+
+</struts-config>
+       
+       
